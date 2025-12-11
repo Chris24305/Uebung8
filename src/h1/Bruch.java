@@ -9,8 +9,8 @@ public class Bruch {
 	}
 
 	public int ggT(int x, int y) {
-		if (x == 0) {
-			return y;
+		if (x == 0||y==0) {
+			return 1;
 		}
 		if (x < y) {
 			int z = x;
@@ -29,16 +29,24 @@ public class Bruch {
 	}
 
 	public void shorten() {
-		if (zaehler != 0) {
 			int ggT = ggT(nenner, zaehler);
 			nenner /= ggT;
 			zaehler /= ggT;
-		}
 	}
 
 	public boolean hasSameValueAs(Bruch b) {
 		this.shorten();
 		b.shorten();
-		return ((this.nenner == b.nenner) && (this.zaehler == b.zaehler)) || ((this.zaehler == 0) && (b.zaehler == 0));
+		if ((this.nenner == b.nenner) && (this.zaehler == b.zaehler)) {
+			return true;
+		}
+		if ((this.nenner == 0) && (b.nenner == 0)) {
+			return true;
+		}
+		if ((this.zaehler == 0) && (b.zaehler == 0)) {
+			return true;
+		}
+		return false;
+		
 	}
 }
