@@ -44,7 +44,7 @@ Node head = new Node(Integer.MIN_VALUE);
 	
 	
 	public boolean insertAfter(int preValue, int newValue) {
-		if (findFirst(newValue) == null) {
+		if (findFirst(preValue) == null) {
 			return false;
 		}
 		

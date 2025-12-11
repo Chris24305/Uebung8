@@ -10,7 +10,7 @@ public class Bruch {
 
 	public int ggT(int x, int y) {
 		if (x == 0) {
-			return 0;
+			return y;
 		}
 		if (x < y) {
 			int z = x;
