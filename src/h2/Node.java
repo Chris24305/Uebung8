@@ -1,8 +1,10 @@
 package h2;
 
 public class Node {
-	Node next;
-	int value;
+	
+	public Node next;
+	public int value;
+	
 	public Node(int value) {
 		this.value = value;
 		next = null;
